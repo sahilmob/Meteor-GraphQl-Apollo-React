@@ -1,6 +1,7 @@
 import React from 'react';
 import gql from 'graphql-tag';
 import {graphql} from 'react-apollo'
+import ResolutionForm from './ResolutionForm'
 
 const App = ({data}) => {
     if (data.loading) 
@@ -8,6 +9,7 @@ const App = ({data}) => {
     return (
         <div>
             <h1>{data.hi}</h1>
+            <ResolutionForm refetch={data.refetch}/>
             <ul>
                 {data
                     .resolutions
@@ -28,4 +30,5 @@ const hiQuery = gql `
   }
 }
 `;
+
 export default graphql(hiQuery)(App);

@@ -5,6 +5,7 @@ import merge from "lodash/merge";
 import ResolutionsSchema from "../../api/resolutions/Resolutions.graphql";
 import ResolutionsResolvers from "../../api/resolutions/resolvers";
 
+//i
 const testSchema = `
 type Query {
   hi: String
@@ -17,7 +18,7 @@ const typeDefs = [testSchema, ResolutionsSchema];
 const testResolvers = {
     Query: {
         hi() {
-            return "Hello Level Up";
+            return "Hello World";
         }
     }
 };

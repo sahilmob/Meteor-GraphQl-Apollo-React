@@ -1,15 +1,20 @@
+import Resolutions from './resolutions';
+
 export default {
     Query : {
         resolutions() {
-            return [
-                {
-                    _id: 'fdghftrhbrtdft',
-                    name: 'Get stuff done'
-                }, {
-                    _id: 'ffffffffffffff',
-                    name: 'lose some weight'
-                }
-            ]
+            return Resolutions
+                .find({})
+                .fetch();
+        }
+    },
+    Mutation : {
+        createResolution(obj, {
+            name
+        }, context) {
+            console.log('got here');
+            const resolutionId = Resolutions.insert({name});
+            return Resolutions.findOne(resolutionId)
         }
     }
 };
