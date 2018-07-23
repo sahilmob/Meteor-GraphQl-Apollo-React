@@ -11,7 +11,7 @@ type Query {
 const resolvers = {
     Query: {
         hi() {
-            return 'Hello World'
+            return 'Hello World!!!'
         }
     }
 };
