@@ -5,15 +5,17 @@ export default {
         resolutions(obj, args, {userId}) {
             console.log(userId)
             return Resolutions
-                .find({})
+                .find({
+                    userId
+                })
                 .fetch();
         }
     },
     Mutation: {
-        createResolution(obj, {name}, context) {
-            console.log('got here');
+        createResolution(obj, {name}, {userId}) {
             const resolutionId = Resolutions.insert({
-                name
+                name,
+                userId
             });
             return Resolutions.findOne(resolutionId)
         }
