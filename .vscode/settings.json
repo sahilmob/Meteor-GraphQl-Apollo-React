@@ -2,5 +2,9 @@
     "editor.formatOnSave": true,
     "javascript.validate.enable": true,
     "javascript.format.enable": false,
-    "prettier.eslintIntegration": true
+    "prettier.eslintIntegration": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "prettier.jsxBracketSameLine": false,
+    "react.beautify.formatter": "esformatter"
 }
